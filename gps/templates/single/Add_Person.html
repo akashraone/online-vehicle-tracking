@@ -1,0 +1,148 @@
+{% extends 'single/singleindex.html' %}
+{%  block contentarea %}
+            <form class="form-horizontal" role="form" method="POST" action="Add_Person_For_Tracking" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <h2>Person Details</h2>
+                <div class="form-group">
+                    <label for="Name" class="col-sm-3 control-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="name" placeholder=" Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Father Name" class="col-sm-3 control-label">Father Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="fatherName" placeholder="Father Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" name="email" placeholder="Email" class="form-control" name= "email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" name="pword" placeholder="Password" class="form-control">
+                    
+                    </div>
+                </div>
+                
+                
+                
+
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Mobile number </label>
+                    <div class="col-sm-9">
+                        <input type="mobilenumber" name="mobilenumber" placeholder="Mobile number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Nearest Police Station  Number </label>
+                    <div class="col-sm-9">
+                        <input type="mobilenumber" name="policenumber" placeholder="Nearest Police Station  Number" class="form-control">
+                    
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Female">Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Male">Male
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="address" class="col-sm-3 control-label">Address </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="address" placeholder="Address" class="form-control">
+                    </div>
+                </div>
+                <h3>ID Proof </h3>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">ID Type</label>
+                    <div class="col-sm-9">
+                         <select class="custom-select" name="idproof">
+                                      <option  selected>Select your Id</option>
+                                      <option  value="ADHARCARD">ADHARCARD</option>
+                                      <option  value="PAN CARD">PAN CARD</option>
+                                      <option  value="VOTER ID CARD">VOTER ID CARD</option>
+                                      <option  value="PASSPORT">PASSPORT</option>
+                                      
+                                    </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Enter ID Number </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="idno" placeholder="ID Number" class="form-control">
+                    
+                    </div>
+                </div>
+                <h3>Five Emergency Number</h3>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Contact Number 1 </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="conone" placeholder="Contact Number 1" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Contact Number 2 </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="contwo" placeholder="Contact Number 2" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Contact Number 3 </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="conthr" placeholder="Contact Number 3" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Contact Number 4 </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="confour" placeholder="Contact Number 4" class="form-control">
+                    
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">ID Pic Upload  </label>
+                    <div class="col-sm-9">
+                        <input type="file" name="myfile" >
+                    
+                    </div>
+                </div>
+                 
+                 
+    
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                    
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form> <!-- /form --> <!-- ./container -->
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'admin/adminindex.html' %}
+{%  block contentarea %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	{% if records %}
+     <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+     	<thead>
+     	<tr><th>ID</th><th>Pic</th><th> Company Name</th><th>Director Name</th><th>Date of Company Establish</th><th>Email</th><th>Mobile Number</th><th>Number of Vehicle</th><th>Password</th><th>GST Number</th><th>Edit/View/Delete</th></tr>
+     	{% for k in records %}
+<tr><td>{{k.id}}</td><td><a href="{{k.pic}}"><img src="{{k.pic}}" style="height:50px; width: 50px;border-radius:50%;"></td><td>{{k.comname}}</td><td>{{k.drname}}</td><td>{{k.Dateesbh}}</td><td>{{k.email}}</td><td>{{k.mobilenumber}}</td><td>{{k.vnumber}}</td><td>{{k.pword}}</td><td>{{k.gstnumber}}</td>
+<td><button class="btn btn-success" value="edit-{{k.id}}"   data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+<button class="btn btn-danger" value="delete-{{k.id}}">  <span class="glyphicon glyphicon-remove"></span>Delete</button>
+<button class="btn btn-primary" value="view-{{k.id}}" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-search"></span>View</button>
+
+</td>
+
+
+</tr>
+
+     	{%endfor %}
+     
+	{% endif %}
+</thead>
+</table>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        
+        <div id='result'></div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}

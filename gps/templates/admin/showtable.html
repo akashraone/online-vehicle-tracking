@@ -1,0 +1,25 @@
+{% extends 'admin/adminindex.html' %}
+{%  block contentarea %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% if records %}
+     <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+     	<thead>
+     	<tr><th>ID</th><th>Pic</th><th>Name</th><th>Father Name</th><th>Email</th><th>Birth Date</th><th>Mobile Number</th><th>Gender</th><th>Email</th><th>Address</th><th>ID Proof</th><th>ID No</th></tr>
+     	{% for k in records %}
+<tr><td>{{k.id}}</td><td><a href="{{k.pic}}"><img src="{{k.pic}}" style="height:50px; width: 50px;border-radius:50%;"></td><td>{{k.name}}</td><td>{{k.fatherName}}</td><td>{{k.email}}</td><td>{{k.birthDate}}</td><td>{{k.mobilenumber}}</td><td>{{k.gender}}</td><td>{{k.email}}</td><td>{{k.address}}</td><td>{{k.idproof}}</td><td>{{k.idno}}</td></tr>
+
+     	{%endfor %}
+     
+	{% endif %}
+</thead>
+</table>
+</div>
+</body>
+</html>
+{% endblock %}

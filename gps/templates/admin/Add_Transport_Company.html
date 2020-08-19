@@ -1,0 +1,100 @@
+{% extends 'admin/adminindex.html' %}
+{% block contentarea %}
+      <form class="form-horizontal" role="form" method="POST" action="Add_Transport_Company" enctype="multipart/form-data">
+            	{% csrf_token %}
+                <h2>Company Details</h2>
+                <div class="form-group">
+                    <label for="Name" class="col-sm-3 control-label">Company Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="comname" placeholder="Company Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Father Name" class="col-sm-3 control-label">Director Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="drname" placeholder="Director Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" name="email" placeholder="Email" class="form-control" name= "email">
+                    </div>
+                </div>
+                
+                
+                
+
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Company establish*</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="Dateesbh" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Mobile Number </label>
+                    <div class="col-sm-9">
+                        <input type="mobilenumber" name="mobilenumber" placeholder="Mobile number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Number of Vehicle </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="vnumber" placeholder="Number of Vehicle" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" name="pword" placeholder="Password" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="gstnumber" class="col-sm-3 control-label">GST Number </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="gstnumber" placeholder="GST Number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="linumber" class="col-sm-3 control-label">License Number </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="licensenumber" placeholder="License Number" class="form-control">
+                    
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                        <label for="address" class="col-sm-3 control-label">Address </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="address" placeholder="Address" class="form-control">
+                    </div>
+                </div>
+              
+             
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Registration ID Number </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="regidno" placeholder="Registration ID Number" class="form-control">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Upload Logo </label>
+                    <div class="col-sm-9">
+                        <input type="file" name="myfile">
+                    </div>
+                </div>
+                
+             <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                    
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form> <!-- /form -->
+ <!-- ./container -->
+{% endblock %}

@@ -1,0 +1,26 @@
+
+<html>
+<body>
+  <form method="get" action="viewrecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		
+		<tr><th>Name</th><td>{{obj.name}}</td>
+          <input type="hidden" name="uid" value="{{obj.id}}">
+         
+		</td></tr>
+		<tr><th>Father Name</th><td>{{obj.fatherName}}</td></tr>
+		<tr><th>ID Pic Upload</th><td><a href="{{obj.pic}}"><img src="{{obj.pic}}" style="height:50px; width: 50px;border-radius:50%;"></a></td></tr>
+		<tr><th>Email</th><td>{{obj.email}}</td></tr>
+		<tr><th>Password</th><td>{{obj.pword}}</td></tr>
+		<tr><th> Date of Birth  </th><td>{{obj.birthDate}}</td></tr>
+		<tr><th>Mobile number</th><td>{{obj.mobilenumber}}</td></tr>
+		<tr><th>Gender</th><td>{{obj.gender}}</td></tr>
+		<tr><th>Address</th><td>{{obj.address}}</td></tr>
+		<tr><th>ID Proof</th><td>{{obj.idproof}}</td></tr>
+		<tr><th>Enter ID Number</th><td>{{obj.idno}}</td></tr>
+		
+
+	</table>
+</body>
+</html>

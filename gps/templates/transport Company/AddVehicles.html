@@ -1,0 +1,110 @@
+{% extends 'transport Company/transportindex.html' %}
+{% block contentarea %}
+            <form class="form-horizontal" role="form" method="POST" action="AddVehicles" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2>Vehicle Details</h2>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Vehicle number </label>
+                    <div class="col-sm-9">
+                        <input type="mobilenumber" name="vehnumber" placeholder="Vehicle number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Name" class="col-sm-3 control-label">Brand</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="brand" placeholder="Brand Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="col-sm-3 control-label">Model </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="modnumber" placeholder="Model Number" class="form-control">
+                    
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Permit</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="permitdate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="col-sm-3 control-label">License Number </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="licensen" placeholder="License Number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="col-sm-3 control-label">Average(in KM) </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="averg" placeholder="Average" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">RC ID  </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="rc" placeholder="RC ID " class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="col-sm-3 control-label">Tank Capacity(in liter) </label>
+                    <div class="col-sm-9">
+                        <input type="number" name="tank" placeholder="Tank Capacity" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label">Transport Comapny ID  </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="transp" placeholder=" Single Client" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Number" class="col-sm-3 control-label">Driver Contact Number</label>
+                    <div class="col-sm-9">
+                        <input type="number" name="dnumber" placeholder="Mobile number" class="form-control">
+                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" name="email" placeholder="Email" class="form-control" name= "email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password </label>
+                    <div class="col-sm-9">
+                        <input type="password" name="pword" placeholder="Password" class="form-control">
+                    
+                    </div>
+                </div>
+
+
+
+
+
+                
+                 <div class="form-group">
+                    <label for="IDNumber" class="col-sm-3 control-label"> Vehicle Pic From Front  </label>
+                    <div class="col-sm-9">
+                        <input type="file" name="vehiclephoto">
+                    </div>
+                </div>
+                
+             <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                    
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form> <!-- /form -->
+ <!-- ./container -->
+{% endblock %}

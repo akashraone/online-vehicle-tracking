@@ -1,0 +1,25 @@
+
+<html>
+<body>
+  <form method="get" action="viewcompanyrecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+		<tr><th>Company name</th><td>{{obj.comname}}
+          <input type="hidden" name="uid" value="{{obj.id}}"></td></tr>
+		<tr><th>Director Name</th><td>{{obj.drname}}</td></tr>
+		<tr><th> Logo of Comapny</th><td><a href="{{obj.pic}}"><img src="{{obj.pic}}" style="height:50px; width: 50px;border-radius:50%;"></a></td></tr>
+		<tr><th>Date of Company establish</th><td>{{obj.Dateesbh}}</td></tr>
+		<tr><th>Email</th><td>{{obj.email}}</td></tr>
+		<tr><th>Mobile Number</th><td> {{obj.mobilenumber}}</td></tr>
+		<tr><th>Number of Vehicle</th><td> {{obj.vnumber}}</td></tr>
+		<tr><th>Password</th><td> {{obj.pword}}</td></tr>
+		<tr><th>GST Number</th><td> {{obj.gstnumber}}</td></tr>
+		<tr><th>Number of Vehicle</th><td>{{obj.vnumber}}</td></tr>
+		<tr><th>License Number</th><td> {{obj.licensenumber}}</td></tr>
+		<tr><th>Adress</th><td> {{obj.address}}</td></tr>
+		<tr><th>Registration ID Number</th><td>{{obj.regidno}}</td></tr>
+
+	</table>
+</body>
+</html>

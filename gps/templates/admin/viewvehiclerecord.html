@@ -1,0 +1,28 @@
+<html>
+<body>
+  <form method="get" action="viewvehiclerecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		
+		<tr><th>Vehicle Number</th><td>{{obj.vehnumber}}
+          <input type="hidden" name="uid" value="{{obj.id}}">
+         
+		</td></tr>
+		<tr><th>Vehicle Pic From Front </th><td><a href="{{obj.pic}}"><img src="{{obj.pic}}" style="height:50px; width: 50px;border-radius:50%;"></a></td>
+		<tr><th>Brand</th><td>{{obj.brand}}</td></tr>
+		<tr><th>Model Number</th><td>{{obj.modnumber}}</td></tr>
+		<tr><th>Permit  Date  </th><td>{{obj.permitdate}}</td></tr>
+		<tr><th>Licensen Number</th><td>{{obj.licensen}}</td></tr>
+		<tr><th>Average (in Km)</th><td>{{obj.averg}}</td></tr>
+		<tr><th>RC ID</th><td>{{obj.rc}}</td></tr>
+		<tr><th>  Capcity of Tank(in Liter)</th><td>{{obj.tank}}</td></tr>
+		<tr><th>Transport Company ID/Single Client</th><td>{{obj.transp}}</td></tr>
+
+		<tr><th>Driver Contact Number</th><td>{{obj.dnumber}}</td></tr>
+		<tr><th>Email</th><td>{{obj.email}}</td></tr>
+		<tr><th>Password</th><td>{{obj.pword}}</td></tr>
+
+	</table>
+
+</body>
+</html>

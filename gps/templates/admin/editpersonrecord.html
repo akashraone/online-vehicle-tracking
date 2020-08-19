@@ -1,0 +1,29 @@
+<html>
+<body>
+  <form method="get" action="updatepersonrecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		
+		<tr><th>Name</th><td><input type="text" name="name" value="{{obj.name}}">
+          <input type="hidden" name="uid" value="{{obj.id}}">
+         
+		</td></tr>
+		<tr><th>Father Name</th><td><input type="text" name="fatherName" value="{{obj.fatherName}}"></td></tr>
+		<tr><th>Email</th><td><input type="text" name="email" value="{{obj.email}}"></td></tr>
+		<tr><th>Password</th><td><input type="password" name="pword" value="{{obj.email}}"></td></tr>
+		<tr><th> Date of Birth  </th><td> <input type="date" name="birthDate" value="{{obj.birthDate}}"></td></tr>
+		<tr><th>Mobile number</th><td> <input type="number" name="mobilenumber" value="{{obj.mobilenumber}}"></td></tr>
+		<tr><th>Nearest Police Station  Number</th><td> <input type="number" name="policenumber" value="{{obj.policenumber}}"></td></tr>
+		<tr><th>Gender</th><td> <input type="text" name="gender" value="{{obj.gender}}"></td></tr>
+		<tr><th>Address</th><td> <input type="text" name="address" value="{{obj.address}}"></td></tr>
+		<tr><th>ID Proof</th><td> <input type="text" name="idproof" value="{{obj.idproof}}"></td></tr>
+		<tr><th>Enter ID Number</th><td> <input type="number" name="idno" value="{{obj.idno}}"></td></tr>
+		<tr><th>Contact Number 1</th><td> <input type="number" name="conone" value="{{obj.conone}}"></td></tr>
+		<tr><th>Contact Number 2</th><td> <input type="number" name="contwo" value="{{obj.contwo}}"></td></tr>
+		<tr><th>Contact Number 3</th><td> <input type="number" name="conthr" value="{{obj.conthr}}"></td></tr>
+		<tr><th>Contact Number 4</th><td> <input type="number" name="confour" value="{{obj.confour}}"></td></tr>
+		<tr><td><button type="submit">submit</button></td></tr>
+	</table>
+
+</body>
+</html>

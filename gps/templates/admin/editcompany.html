@@ -1,0 +1,27 @@
+
+<html>
+<body>
+  <form method="get" action="updatecompanyrecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		
+		<tr><th>Company name</th><td><input type="text" name="comname" value="{{obj.comname}}">
+          <input type="hidden" name="uid" value="{{obj.id}}">
+         
+		</td></tr>
+		<tr><th>Director Name</th><td><input type="text" name="drname" value="{{obj.drname}}"></td></tr>
+		<tr><th>Date of Company establish</th><td><input type="birthDate" name="Dateesbh" value="{{obj.Dateesbh}}"></td></tr>
+		<tr><th>Email</th><td> <input type="email" name="email" value="{{obj.email}}"></td></tr>
+		<tr><th>Mobile Number</th><td> <input type="number" name="mobilenumber" value="{{obj.mobilenumber}}"></td></tr>
+		<tr><th>Number of Vehicle</th><td> <input type="number" name="vnumber" value="{{obj.vnumber}}"></td></tr>
+		<tr><th>Password</th><td> <input type="password" name="pword" value="{{obj.pword}}"></td></tr>
+		<tr><th>GST Number</th><td> <input type="number" name="gstnumber" value="{{obj.gstnumber}}"></td></tr>
+		<tr><th>License Number</th><td> <input type="number" name="licensenumber" value="{{obj.licensenumber}}"></td></tr>
+		<tr><th>Adress</th><td> <input type="text" name="address" value="{{obj.address}}"></td></tr>
+		<tr><th>Registration ID Number</th><td> <input type="number" name="regidno" value="{{obj.regidno}}"></td></tr>
+		                                      
+		<tr><td><button type="submit">submit</button></td></tr>
+
+	</table>
+</body>
+</html>

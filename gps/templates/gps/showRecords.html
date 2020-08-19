@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% if records  %}
+<table border="1">
+	<tr><th>ID</th><td>USER TYPE</td><th>EMAIL</th><th>PASSWORD</th><th>CONTACT</th></tr>
+{% for k in records  %} 
+<tr><td>{{k.id}}</td><td>{{k.usertype}}</td><td>{{k.email}}</td><td>{{k.password}}
+</td><td>{{k.contact}}</tr>
+{% endfor %}
+</table>
+{%  endif  %}
+</body>
+</html>

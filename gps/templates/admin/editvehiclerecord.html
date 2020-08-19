@@ -1,0 +1,31 @@
+<html>
+<body>
+  <form method="get" action="updatevehiclerecord">
+    {% csrf_token %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		
+		<tr><th>Vehicle Number</th><td><input type="number" name="vehnumber" value="{{obj.vehnumber}}">
+          <input type="hidden" name="uid" value="{{obj.id}}">
+         
+		</td></tr>
+		<tr><th>Vehicle Pic From Front </th><td><a href="{{obj.pic}}"><img src="{{obj.pic}}" style="height:50px; width: 50px;border-radius:50%;"></a></td>
+		<tr><th>Brand</th><td><input type="number" name="brand" value="{{obj.brand}}"></td></tr>
+		<tr><th>Model Number</th><td><input type="number" name="modnumber" value="{{obj.modnumber}}"></td></tr>
+		<tr><th>Permit  Date  </th><td> <input type="date" name="permitdate" value="{{obj.permitdate}}"></td></tr>
+		<tr><th>Licensen Number</th><td> <input type="number" name="licensen" value="{{obj.licensen}}"></td></tr>
+		<tr><th>Average (in Km)</th><td> <input type="number" name="averg" value="{{obj.averg}}"></td></tr>
+		<tr><th>RC ID</th><td> <input type="number" name="rc" value="{{obj.rc}}"></td></tr>
+		<tr><th>  Capcity of Tank(in Liter)</th><td> <input type="text" name="tank" value="{{obj.tank}}"></td></tr>
+		<tr><th>Transport Company ID/Single Client</th><td> <input type="text" name="transp" value="{{obj.transp}}"></td></tr>
+
+		<tr><th>Driver Contact Number</th><td> <input type="number" name="dnumber" value="{{obj.dnumber}}"></td></tr>
+		<tr><th>Email</th><td> <input type="email" name="email" value="{{obj.email}}"></td></tr>
+		<tr><th>Password</th><td> <input type="password" name="pword" value="{{obj.pword}}"></td></tr>
+
+
+
+		<tr><td><button type="submit">submit</button></td></tr>
+	</table>
+
+</body>
+</html>
